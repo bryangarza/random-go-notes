@@ -14,17 +14,17 @@ As of go 1.2, a valid GOPATH is required to use the `go get` command:
   http://golang.org/doc/go1.2#go_tools_godoc
 
 To get `go vet` and `go doc` run:
-  `go get code.google.com/p/go.tools/cmd/godoc`
-  `go get code.google.com/p/go.tools/cmd/vet`
+  go get code.google.com/p/go.tools/cmd/godoc
+  go get code.google.com/p/go.tools/cmd/vet
 
 You may wish to add the GOROOT-based install location to your PATH:
-  `export PATH=$PATH:/usr/local/opt/go/libexec/bin`
+  export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 Bash completion has been installed to:
-  `/usr/local/etc/bash_completion.d`
+  /usr/local/etc/bash_completion.d
 
 zsh completion has been installed to:
-  `/usr/local/share/zsh/site-functions`
+  /usr/local/share/zsh/site-functions
 
 
 Go's basic types:
@@ -47,7 +47,7 @@ float32 float64
 complex64 complex128
 
 
-Newton's method for square roots (A Tour of Go Pt. 25):
+Newton's sqrt method (A Tour of Go Pt. 25):
 -------------------------------------------------------
 
 ```go
