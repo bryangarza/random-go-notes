@@ -4,6 +4,70 @@ RANDOM GO NOTES
 some cute Go snippets and such.
 
 
+Sep 6 2014
+==========
+
+Slices
+------
+
+A slice points to an array of values and also includes a length.
+
+[]T is a slice with elements of type T.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+
+    excellent := []string{"hi", "what", "is", "going", "on", "?"}
+    fmt.Println("excellent ==", excellent)
+
+    for i := 0; i < len(excellent); i++ {
+        fmt.Printf("excellent[%d] == %v\n", i, excellent[i])
+    }
+    fmt.Printf("#%v\n\n", excellent)
+
+
+
+    p := []int{2, 3, 5, 7, 11, 13}
+    fmt.Println("p ==", p)
+
+    for i := 0; i < len(p); i++ {
+        fmt.Printf("p[%d] == %d\n", i, p[i])
+    }
+    fmt.Printf("%#v\n", p)
+
+}
+```
+
+The output:
+
+```
+excellent == [hi what is going on ?]
+excellent[0] == hi
+excellent[1] == what
+excellent[2] == is
+excellent[3] == going
+excellent[4] == on
+excellent[5] == ?
+#[hi what is going on ?]
+
+p == [2 3 5 7 11 13]
+p[0] == 2
+p[1] == 3
+p[2] == 5
+p[3] == 7
+p[4] == 11
+p[5] == 13
+[]int{2, 3, 5, 7, 11, 13}
+```
+
+
+Sep 5 2014
+==========
+
 Go Homebrew Caveats
 -------------------
 
