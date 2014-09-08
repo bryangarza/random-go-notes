@@ -4,6 +4,27 @@ RANDOM GO NOTES
 some cute Go snippets and such.
 
 
+Sep 7 2014
+==========
+
+Since the zero value of a slice (nil) acts like a zero-length slice, you can
+declare a slice variable and then append to it in a loop:
+
+```go
+// Filter returns a new slice holding only
+// the elements of s that satisfy f()
+func Filter(s []int, fn func(int) bool) []int {
+    var p []int // == nil
+    for _, v := range s {
+        if fn(v) {
+            p = append(p, v)
+        }
+    }
+    return p
+}
+```
+
+
 Sep 6 2014
 ==========
 
